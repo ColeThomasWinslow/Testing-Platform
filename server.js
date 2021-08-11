@@ -25,7 +25,7 @@ mongoose.connection.on("connected", () => {
   console.log("Mongoose is connected!!!!");
 });
 app.use("/api/auth", authRoute);
-app.use("/api/all", testRoute);
+app.use("/api/tests", testRoute);
 app.use(morgan("tiny"));
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));

@@ -1,5 +1,5 @@
 {
-  "name": "social-media-app",
+  "name": "testplatform",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,7 +10,7 @@
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node server.js",
     "client": "cd client && npm start",
-    "dev": "concurrently -n 'index,client' -c 'red,green'  \"nodemon index.js\" \"npm run client\""
+    "dev": "concurrently -n 'index,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
