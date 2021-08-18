@@ -1,28 +1,22 @@
-import React, { useState, useEffect } from "react";
-
-import { AllTests } from "../utils/AllTests";
+import React, { useState } from "react";
+import { TestTitles } from "../utils/TestTitles";
 import { Link } from "react-router-dom";
 function Home() {
-  const [Tests, setTests] = useState([]);
-
-  useEffect(() => {
-    AllTests().then((result) => {
-      setTests(result.data);
-    });
-  }, []);
-
+  const [Test] = useState(TestTitles);
   return (
     <div>
-      <h2>This is the home Page</h2>
-
-      {Tests.map((test) => {
+      <div>
+        <h1>Javascript Quizzes</h1>
+      </div>
+      {Test.map((elm) => {
         return (
-          <details key={test._id}>
-            <summary>{test.title}</summary> <p>Questions: {test.Test.length}</p>
-            <Link to={`/Test/${test._id}`}>
-              <button>Take Test</button>
+          <div key={elm.id}>
+            <h3>{elm.testTitle}</h3>
+            <p> Number of Questions: {elm.questions}</p>
+            <Link to={`/Test/${elm.id}`}>
+              <button>Take Test Now</button>
             </Link>
-          </details>
+          </div>
         );
       })}
     </div>

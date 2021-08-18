@@ -1,28 +1,35 @@
 import "./App.css";
 import React, { useState, useMemo } from "react";
-import { UserContext } from "./UserContext";
+
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Login from "./components/Login";
-import NewAccount from "./components/NewAccount";
+import styled from "styled-components";
+
 import Home from "./components/Home";
 import TestingPage from "./components/TestingPage";
 function App() {
-  const [user, setUser] = useState(null);
-  const value = useMemo(() => ({ user, setUser }), [user, setUser]);
+  const [count, setCount] = useState(0);
+  function AddScore(Amt) {
+    setCount(count + Amt);
+  }
+  function ZeroScore() {
+    setCount(0);
+  }
   return (
-    <div className="App">
+    <AppBox>
       <Router>
-        <UserContext.Provider value={value}>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/" component={NewAccount} />
-          <Route exact path="/home" component={Home} />
-          <Route path="/Test/:id">
-            <TestingPage />
-          </Route>
-        </UserContext.Provider>
+        <h2>Total Score: {count}</h2>
+
+        <button onClick={ZeroScore}>Reset Score</button>
+        <Route exact path="/" component={Home} />
+        <Route path="/Test/:id">
+          <TestingPage props={AddScore} />
+        </Route>
       </Router>
-    </div>
+    </AppBox>
   );
 }
 
 export default App;
+const AppBox = styled.div`
+  height: 100vh;
+`;

@@ -1,13 +1,5 @@
 body {
   margin: 0px;
-  padding: 10px;
-}
-details > summary {
-  padding: 4px;
-  width: 200px;
-  background-color: #eeeeee;
-
-  border: none;
-  box-shadow: 1px 1px 2px #bbbbbb;
-  cursor: pointer;
+  background: black;
+  color: #f7df1e;
 }
