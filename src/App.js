@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import styled from "styled-components";

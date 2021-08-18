@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import { Tests } from "../utils/Tests";
@@ -6,9 +6,7 @@ function TestingPage(AddScore) {
   const URL = window.location;
   const ID = URL.toString().split("/")[4];
 
-  const [Test, setTest] = useState(
-    Tests.filter((test) => test.id == ID)[0].Test
-  );
+  const [Test] = useState(Tests.filter((test) => test.id === ID)[0].Test);
   const [Start, setStart] = useState(false);
   function StartQuiz() {
     setStart((Start) => !Start);
