@@ -6,7 +6,7 @@ function TestingPage(AddScore) {
   const URL = window.location;
   const ID = URL.toString().split("/")[4];
 
-  const [Test] = useState(Tests.filter((test) => (test.id = ID))[0].Test);
+  const [Test] = useState(Tests.filter((test) => test.id == ID)[0].Test);
   const [Start, setStart] = useState(false);
   function StartQuiz() {
     setStart((Start) => !Start);
