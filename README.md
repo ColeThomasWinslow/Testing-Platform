@@ -2,7 +2,7 @@
 
 ## Design Screenshot
 
-![Design Screenshot](./public/Images/Design.png)
+![Design Screenshot](./public/images/Design.png)
 
 ## Quiz App
 
