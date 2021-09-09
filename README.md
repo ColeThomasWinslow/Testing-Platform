@@ -1,4 +1,4 @@
-# Javascript Quiz APP
+# Javascript Quiz app
 
 ## Design Screenshot
 
