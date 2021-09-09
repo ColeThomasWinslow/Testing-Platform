@@ -6,7 +6,7 @@
 
 ## Quiz App
 This a basic quiz app with multiple quizzes that go over the topics surrounding Javascript and Computer Programing
-To test how the the app works take the example test that has no infomation on Programming to see the functionality of the app. Check it out with the link below ⬇️ .
+To test how the the app works take the example test that has no information on Programming to see the functionality of the app. Check it out with the link below ⬇️ .
 
 ## Deployed application
 
