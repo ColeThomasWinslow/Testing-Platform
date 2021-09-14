@@ -6,6 +6,7 @@ function Home() {
   const [Test] = useState(TestTitles);
   return (
     <div>
+      <DevImg src="/images/Dev-Tag.png" alt="Dev" />
       <Header>
         <h2>Javascript Quizzes </h2>
         <p>TEST YOUR JAVASCRIPT SKILLS</p>
@@ -30,6 +31,13 @@ function Home() {
 }
 
 export default Home;
+const DevImg = styled.img`
+  width: 200px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 20;
+`;
 const AllTestsBox = styled.div`
   display: flex;
   flex-direction: column;
